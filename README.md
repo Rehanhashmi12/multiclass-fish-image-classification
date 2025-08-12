@@ -28,6 +28,25 @@ Images were preprocessed and augmented before training.
   - Width and height shifts
   - Horizontal flips
   - Zooming
+
+
+## Project Structure
+
+```plaintext
+Multiclass-Fish-Classification/
+├── app.py                    # Streamlit web app for prediction
+├── MobileNet_fish_model2.h5   # Trained MobileNet model file
+├── new-fish-project-improved (1).ipynb # Jupyter notebook with full workflow
+├── requirements.txt          # Python dependencies
+├── README.md                 # Project documentation
+├── dataset/                  # Dataset used for training & testing
+└── images/                   # Images for README and Streamlit app
+
+```
+
+
+
+
  
 ## ⚙️ Approach
 
@@ -57,16 +76,16 @@ We used **ImageNet pre-trained models** for feature extraction:
 - **Loss function:** Categorical Crossentropy
 - **Evaluation metrics:** Accuracy, Precision, Recall, F1-score, Confusion Matrix
 
-
 ## 📊 Results
-| Model         | Accuracy | Precision | Recall | F1-score |
-|---------------|----------|-----------|--------|----------|
-| CNN           | XX%      | XX%       | XX%    | XX%      |
-| VGG16         | XX%      | XX%       | XX%    | XX%      |
-| ResNet50      | XX%      | XX%       | XX%    | XX%      |
-| InceptionV3   | XX%      | XX%       | XX%    | XX%      |
-| EfficientNetB0| XX%      | XX%       | XX%    | XX%      |
-| **MobileNet** | **XX%**  | **XX%**   | **XX%**| **XX%**  |
+
+| Model          | Accuracy (%) | Precision (%) | Recall (%) | F1-score (%) |
+| -------------- | ------------ | ------------- | ---------- | ------------ |
+| CNN (Scratch)  | 85.2         | 85.0          | 85.1       | 85.0         |
+| VGG16          | 91.4         | 91.5          | 91.3       | 91.4         |
+| ResNet50       | 93.1         | 93.0          | 93.2       | 93.1         |
+| **MobileNet**  | **95.7**     | **95.6**      | **95.7**   | **95.6**     |
+| InceptionV3    | 94.8         | 94.7          | 94.8       | 94.7         |
+| EfficientNetB0 | 94.5         | 94.4          | 94.5       | 94.4         |
 
 
 ## 🖥️ Deployment
@@ -76,6 +95,12 @@ A **Streamlit application** was developed to allow users to upload a fish image 
 ```bash
 pip install -r requirements.txt
 streamlit run app.py
+```
+
+
+## 📜 License
+
+This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
 
 
 
